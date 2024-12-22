@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_test/widgets/counter_inherited_widget.dart';
 
 class CounterWidget extends StatelessWidget {
   const CounterWidget();
@@ -13,7 +14,7 @@ class CounterWidget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              '28',
+              CounterInheritedWidget.of(context).counterValue.toString(),
               style: const TextStyle(
                 fontSize: 18.0,
               ),
